@@ -21,7 +21,7 @@ public class TestFactory {
         /**/ separate();
 
         store = new XiaomiStore();
-        store.printProperties(PhoneModel.IPhoneX);
+        store.printProperties(PhoneModel.Redmi9C);
         /**/ separate();
     }
 

@@ -8,12 +8,12 @@ public abstract class PhoneStore {
         Phone phone = createPhone(model);
 
         System.out.println(
-                "Model: " + model + ",\n" +
-                        "Display type: " + phone.getDisplayType() + ",\n" +
-                        "Back camera: " + phone.getBackCamera() + "MB,\n" +
-                        "Front camera: " + phone.getFrontCamera() + ",\n" +
-                        "RAM: " + phone.getRAM() + ",\n" +
-                        "Capacity: " + phone.getCapacity()
+                "Model: " + model + "\n" +
+                        "Display type: " + phone.getDisplayType() + "\n" +
+                        "Back camera: " + phone.getBackCamera() + " MP\n" +
+                        "Front camera: " + phone.getFrontCamera() + " MP\n" +
+                        "RAM: " + phone.getRAM() + " GB\n" +
+                        "Capacity: " + phone.getCapacity() + " GB"
         );
 
         return phone;
