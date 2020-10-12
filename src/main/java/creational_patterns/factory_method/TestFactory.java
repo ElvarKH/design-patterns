@@ -10,20 +10,19 @@ public class TestFactory {
     public static void main(String[] args) {
 
         PhoneStore store;
-
-        separate();
+        /**/ separate();
 
         store = new AppleStore();
         store.printProperties(PhoneModel.IPhone11);
-        separate();
+        /**/ separate();
 
         store = new SamsungStore();
         store.printProperties(PhoneModel.GalaxyS10);
-        separate();
+        /**/ separate();
 
         store = new XiaomiStore();
         store.printProperties(PhoneModel.IPhoneX);
-        separate();
+        /**/ separate();
     }
 
     static void separate() {
