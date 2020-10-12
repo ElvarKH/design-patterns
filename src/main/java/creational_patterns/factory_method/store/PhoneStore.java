@@ -13,7 +13,7 @@ public abstract class PhoneStore {
                         "Back camera: " + phone.getBackCamera() + "MB,\n" +
                         "Front camera: " + phone.getFrontCamera() + ",\n" +
                         "RAM: " + phone.getRAM() + ",\n" +
-                        "Capacity: " + phone.getCapacity()
+                        "Capacity : " + phone.getCapacity()
         );
 
         return phone;
