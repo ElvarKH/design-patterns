@@ -6,16 +6,16 @@ import creational_patterns.factory_method.phone.PhoneModel;
 
 public class AppleStore extends PhoneStore {
 
-    private PhoneModel phoneModel = null;
+    private PhoneModel phoneModel;
     private String storeName = "Apple Store";
 
     @Override
-    public Apple createPhone(PhoneModel model) {
-        phoneModel = model;
+    public Apple createPhone(PhoneModel phoneModel) {
+        this.phoneModel = phoneModel;
         Apple phone;
 
         try {
-            phone = (Apple) model.getClazz().newInstance();
+            phone = (Apple) phoneModel.getClazz().newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException();
         }

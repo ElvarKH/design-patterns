@@ -10,12 +10,12 @@ public class SamsungStore extends PhoneStore {
     private String storeName = "Samsung Store";
 
     @Override
-    public Samsung createPhone(PhoneModel model) {
-        phoneModel = model;
+    public Samsung createPhone(PhoneModel phoneModel) {
+        this.phoneModel = phoneModel;
         Samsung phone;
 
         try {
-            phone = (Samsung) model.getClazz().newInstance();
+            phone = (Samsung) phoneModel.getClazz().newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException();
         }

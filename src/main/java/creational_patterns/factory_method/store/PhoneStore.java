@@ -9,7 +9,7 @@ public abstract class PhoneStore {
         Phone phone = createPhone(model);
 
         System.out.println(
-                "Model: " + model + "\n" +
+                "Model: " + model.getModelName() + "\n" +
                         "Display type: " + phone.getDisplayType() + "\n" +
                         "Back camera: " + phone.getBackCamera() + " MP\n" +
                         "Front camera: " + phone.getFrontCamera() + " MP\n" +

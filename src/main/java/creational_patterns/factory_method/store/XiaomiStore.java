@@ -10,12 +10,12 @@ public class XiaomiStore extends PhoneStore {
     private String storeName = "Xiaomi Store";
 
     @Override
-    public Xiaomi createPhone(PhoneModel model) {
-        phoneModel = model;
+    public Xiaomi createPhone(PhoneModel phoneModel) {
+        this.phoneModel = phoneModel;
         Xiaomi phone;
 
         try {
-            phone = (Xiaomi) model.getClazz().newInstance();
+            phone = (Xiaomi) phoneModel.getClazz().newInstance();
         } catch (Exception ex) {
             throw new IllegalArgumentException();
         }

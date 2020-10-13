@@ -28,7 +28,7 @@ public class TestFactory {
             phone = store.printProperties(PhoneModel.Redmi9C);
             separate();//////
 
-            phone = store.printProperties(PhoneModel.GalaxyA51); // throw IllegalArgumentException
+            phone = store.printProperties(PhoneModel.IPhoneX); // throw IllegalArgumentException
             separate();//////
 
         } catch (IllegalArgumentException ex) {
