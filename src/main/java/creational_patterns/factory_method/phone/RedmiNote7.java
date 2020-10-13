@@ -3,6 +3,9 @@ package creational_patterns.factory_method.phone;
 import creational_patterns.factory_method.brand.Xiaomi;
 
 public class RedmiNote7 extends Xiaomi {
+
+    public static final String modelName = "Redmi Note 7";
+
     @Override
     public String getDisplayType() {
         return "IPS LCD";

@@ -2,21 +2,34 @@ package creational_patterns.factory_method.store;
 
 import creational_patterns.factory_method.brand.Apple;
 import creational_patterns.factory_method.phone.PhoneModel;
-import creational_patterns.factory_method.phone.IPhone11;
-import creational_patterns.factory_method.phone.IPhoneX;
 
 
 public class AppleStore extends PhoneStore {
+
+    private PhoneModel phoneModel = null;
+    private String storeName = "Apple Store";
+
+    @Override
     public Apple createPhone(PhoneModel model) {
-        switch (model) {
-            case IPhone11:
-                return new IPhone11();
+        phoneModel = model;
+        Apple phone;
 
-            case IPhoneX:
-                return new IPhoneX();
-
-            default:
-                throw new IllegalArgumentException();
+        try {
+            phone = (Apple) model.getClazz().newInstance();
+        } catch (Exception ex) {
+            throw new IllegalArgumentException();
         }
+
+        return phone;
+    }
+
+    @Override
+    public String getStoreName() {
+        return storeName;
+    }
+
+    @Override
+    public PhoneModel getPhoneModel() {
+        return phoneModel;
     }
 }

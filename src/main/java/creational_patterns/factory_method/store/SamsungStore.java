@@ -2,21 +2,34 @@ package creational_patterns.factory_method.store;
 
 import creational_patterns.factory_method.brand.Samsung;
 import creational_patterns.factory_method.phone.PhoneModel;
-import creational_patterns.factory_method.phone.GalaxyS10;
-import creational_patterns.factory_method.phone.GalaxyA51;
 
 
 public class SamsungStore extends PhoneStore {
+
+    private PhoneModel phoneModel;
+    private String storeName = "Samsung Store";
+
+    @Override
     public Samsung createPhone(PhoneModel model) {
-        switch (model) {
-            case GalaxyS10:
-                return new GalaxyS10();
+        phoneModel = model;
+        Samsung phone;
 
-            case GalaxyA51:
-                return new GalaxyA51();
-
-            default:
-                throw new IllegalArgumentException();
+        try {
+            phone = (Samsung) model.getClazz().newInstance();
+        } catch (Exception ex) {
+            throw new IllegalArgumentException();
         }
+
+        return phone;
+    }
+
+    @Override
+    public String getStoreName() {
+        return storeName;
+    }
+
+    @Override
+    public PhoneModel getPhoneModel() {
+        return phoneModel;
     }
 }

@@ -3,6 +3,9 @@ package creational_patterns.factory_method.phone;
 import creational_patterns.factory_method.brand.Xiaomi;
 
 public class Redmi9C extends Xiaomi {
+
+    public static final String modelName = "Redmi 9C";
+
     @Override
     public String getDisplayType() {
         return "IPS LCD";

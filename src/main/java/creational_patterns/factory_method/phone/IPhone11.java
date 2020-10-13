@@ -3,6 +3,9 @@ package creational_patterns.factory_method.phone;
 import creational_patterns.factory_method.brand.Apple;
 
 public class IPhone11 extends Apple {
+
+    public static final String modelName = "IPhone 11";
+
     @Override
     public String getDisplayType() {
         return "IPS LCD";

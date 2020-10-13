@@ -1,22 +1,35 @@
 package creational_patterns.factory_method.store;
 
-import creational_patterns.factory_method.phone.PhoneModel;
 import creational_patterns.factory_method.brand.Xiaomi;
-import creational_patterns.factory_method.phone.Redmi9C;
-import creational_patterns.factory_method.phone.RedmiNote7;
+import creational_patterns.factory_method.phone.PhoneModel;
 
 
 public class XiaomiStore extends PhoneStore {
+
+    private PhoneModel phoneModel;
+    private String storeName = "Xiaomi Store";
+
+    @Override
     public Xiaomi createPhone(PhoneModel model) {
-        switch (model) {
-            case Redmi9C:
-                return new Redmi9C();
+        phoneModel = model;
+        Xiaomi phone;
 
-            case RedmiNote7:
-                return new RedmiNote7();
-
-            default:
-                throw new IllegalArgumentException();
+        try {
+            phone = (Xiaomi) model.getClazz().newInstance();
+        } catch (Exception ex) {
+            throw new IllegalArgumentException();
         }
+
+        return phone;
+    }
+
+    @Override
+    public String getStoreName() {
+        return storeName;
+    }
+
+    @Override
+    public PhoneModel getPhoneModel() {
+        return phoneModel;
     }
 }

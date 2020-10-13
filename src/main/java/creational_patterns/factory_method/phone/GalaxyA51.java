@@ -3,6 +3,8 @@ package creational_patterns.factory_method.phone;
 import creational_patterns.factory_method.brand.Samsung;
 
 public class GalaxyA51 extends Samsung {
+    public static final String modelName = "Galaxy A51";
+
     @Override
     public String getDisplayType() {
         return "Super AMOLED";
