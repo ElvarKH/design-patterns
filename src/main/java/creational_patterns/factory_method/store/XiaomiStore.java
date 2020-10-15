@@ -17,8 +17,8 @@ public class XiaomiStore extends PhoneStore {
         try {
             phone = (Xiaomi) phoneModel.getClazz().newInstance();
         } catch (Exception ex) {
-            throw new IllegalArgumentException();
-        }
+            throw new IllegalArgumentException(); // Daxil edilen model, "Xiaomi" deyishenine menimsedile bilmirse
+        }                                         // ("Xiaomi" class'inin subclass'i deyilse) exception at
 
         return phone;
     }

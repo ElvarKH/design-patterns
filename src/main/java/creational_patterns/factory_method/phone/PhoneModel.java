@@ -12,7 +12,7 @@ public enum PhoneModel {
     private Class clazz;
     private String modelName;
 
-    private PhoneModel(Class clazz, String modelName) {
+    PhoneModel(Class clazz, String modelName) {
         this.clazz = clazz;
         this.modelName = modelName;
     }

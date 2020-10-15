@@ -17,8 +17,8 @@ public class SamsungStore extends PhoneStore {
         try {
             phone = (Samsung) phoneModel.getClazz().newInstance();
         } catch (Exception ex) {
-            throw new IllegalArgumentException();
-        }
+            throw new IllegalArgumentException(); // Daxil edilen model, "Samsung" deyishenine menimsedile bilmirse
+        }                                         // ("Samsung" class'inin subclass'i deyilse) exception at
 
         return phone;
     }

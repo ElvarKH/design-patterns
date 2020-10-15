@@ -17,8 +17,8 @@ public class AppleStore extends PhoneStore {
         try {
             phone = (Apple) phoneModel.getClazz().newInstance();
         } catch (Exception ex) {
-            throw new IllegalArgumentException();
-        }
+            throw new IllegalArgumentException(); // Daxil edilen model, "Apple" deyishenine menimsedile bilmirse
+        }                                         // ("Apple" class'inin subclass'i deyilse) exception at
 
         return phone;
     }

@@ -1,7 +1,7 @@
 package creational_patterns.factory_method;
 
 import creational_patterns.factory_method.brand.Phone;
-import creational_patterns.factory_method.phone.PhoneModel;
+import creational_patterns.factory_method.phone.*;
 import creational_patterns.factory_method.store.AppleStore;
 import creational_patterns.factory_method.store.PhoneStore;
 import creational_patterns.factory_method.store.SamsungStore;
@@ -11,24 +11,21 @@ public class TestFactory {
     public static void main(String[] args) {
 
         PhoneStore store = null;
-        Phone phone = null;
 
         try {
             separate();//////
 
             store = new AppleStore();
-            phone = store.printProperties(PhoneModel.IPhone11);
+            IPhone11 iPhone11 = (IPhone11) store.printProperties(PhoneModel.IPhone11);
             separate();//////
 
             store = new SamsungStore();
-            phone = store.printProperties(PhoneModel.GalaxyS10);
+            GalaxyS10 galaxyS10 = (GalaxyS10) store.printProperties(PhoneModel.GalaxyS10);
             separate();//////
 
             store = new XiaomiStore();
-            phone = store.printProperties(PhoneModel.Redmi9C);
-            separate();//////
-
-            phone = store.printProperties(PhoneModel.IPhoneX); // throw IllegalArgumentException
+            // throw IllegalArgumentException - chunki, store deyisheni RedmiStore obyekti saxlayir
+            IPhoneX iPhoneX = (IPhoneX) store.printProperties(PhoneModel.IPhoneX);
             separate();//////
 
         } catch (IllegalArgumentException ex) {
