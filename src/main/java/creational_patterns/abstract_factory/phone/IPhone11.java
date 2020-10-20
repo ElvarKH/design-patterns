@@ -1,14 +1,14 @@
-package creational_patterns.factory_method.phone;
+package creational_patterns.abstract_factory.phone;
 
-import creational_patterns.factory_method.brand.Apple;
+import creational_patterns.abstract_factory.brand.Apple;
 
-public class IPhoneX extends Apple {
+public class IPhone11 extends Apple {
 
-    public static final String modelName = "IPhone X";
+    public static final String modelName = "IPhone 11";
 
     @Override
     public String getDisplayType() {
-        return "OLED";
+        return "IPS LCD";
     }
 
     @Override
@@ -18,12 +18,12 @@ public class IPhoneX extends Apple {
 
     @Override
     public int getFrontCamera() {
-        return 7;
+        return 12;
     }
 
     @Override
     public int getRAM() {
-        return 3;
+        return 4;
     }
 
     @Override

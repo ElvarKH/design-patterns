@@ -1,14 +1,14 @@
-package creational_patterns.factory_method.phone;
+package creational_patterns.abstract_factory.phone;
 
-import creational_patterns.factory_method.brand.Xiaomi;
+import creational_patterns.abstract_factory.brand.Samsung;
 
-public class RedmiNote7 extends Xiaomi {
+public class GalaxyA51 extends Samsung {
 
-    public static final String modelName = "Redmi Note 7";
+    public static final String modelName = "Galaxy A51";
 
     @Override
     public String getDisplayType() {
-        return "IPS LCD";
+        return "Super AMOLED";
     }
 
     @Override
@@ -18,7 +18,7 @@ public class RedmiNote7 extends Xiaomi {
 
     @Override
     public int getFrontCamera() {
-        return 13;
+        return 32;
     }
 
     @Override

@@ -1,34 +1,52 @@
 package creational_patterns.factory_method.store;
 
+import creational_patterns.factory_method.brand.Phone;
 import creational_patterns.factory_method.brand.Samsung;
 import creational_patterns.factory_method.phone.PhoneModel;
 
 
-public class SamsungStore extends PhoneStore {
+public class SamsungStore {
 
     private PhoneModel phoneModel;
-    private String storeName = "Samsung Store";
+    private static final String storeName = "Samsung Store";
 
-    @Override
-    public Samsung createPhone(PhoneModel phoneModel) {
-        this.phoneModel = phoneModel;
-        Samsung phone;
+    public final Phone printProperties(PhoneModel model) throws InstantiationException, IllegalAccessException {
+        System.out.println("| request: " + model); // print model
 
-        try {
-            phone = (Samsung) phoneModel.getClazz().newInstance();
-        } catch (Exception ex) {
-            throw new IllegalArgumentException(); // Daxil edilen model, "Samsung" deyishenine menimsedile bilmirse
-        }                                         // ("Samsung" class'inin subclass'i deyilse) exception at
+        Phone phone = createPhone(model); // createPhone() method called
+
+        System.out.println(
+                "Model: " + model.getModelName() + "\n" +
+                        "Display type: " + phone.getDisplayType() + "\n" +
+                        "Back camera: " + phone.getBackCamera() + " MP\n" +
+                        "Front camera: " + phone.getFrontCamera() + " MP\n" +
+                        "RAM: " + phone.getRAM() + " GB\n" +
+                        "Capacity: " + phone.getCapacity() + " GB");
 
         return phone;
     }
 
-    @Override
+    public Phone createPhone(PhoneModel phoneModel) throws IllegalAccessException, InstantiationException {
+        this.phoneModel = phoneModel;
+
+        Phone phone;
+
+        try {
+            phone = (Samsung) phoneModel.getClazz().newInstance();
+        } catch (ClassCastException ex) {
+            // Daxil edilen model, "Samsung" tipine cast edile bilmirse
+            // ("Samsung" class'inin subclass'i deyilse) exception at
+            throw new IllegalArgumentException();
+        }
+
+        return phone;
+    }
+
+    // store_name'i obyetkden de chagira bilmek uchun
     public String getStoreName() {
         return storeName;
     }
 
-    @Override
     public PhoneModel getPhoneModel() {
         return phoneModel;
     }

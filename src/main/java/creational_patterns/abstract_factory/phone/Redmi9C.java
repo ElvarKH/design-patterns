@@ -1,6 +1,6 @@
-package creational_patterns.factory_method.phone;
+package creational_patterns.abstract_factory.phone;
 
-import creational_patterns.factory_method.brand.Xiaomi;
+import creational_patterns.abstract_factory.brand.Xiaomi;
 
 public class Redmi9C extends Xiaomi {
 
