@@ -21,7 +21,7 @@ public class TestFactoryMethod {
             separate(); //------
 
             GalaxyS10 galaxyS10 = (GalaxyS10) store.printProperties(PhoneModel.GALAXY_S10);
-            // throw IllegalArgumentException (Galaxy S10 is not Apple)
+            // throw IllegalArgumentException (because, Galaxy S10 is not Apple)
 
         } catch (IllegalArgumentException ex) {
             System.out.println("| " +

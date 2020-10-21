@@ -21,7 +21,7 @@ public class TestAbstractFactory {
             separate(); //------
 
             store = PhoneStoreProducer.createFactory(PhoneStore.TEST_STORE);
-            // throw IllegalArgumentException (IPhone11 is not Samsung)
+            // throw IllegalArgumentException (because, IPhone11 is not Samsung)
 
         } catch (IllegalArgumentException ex) {
             System.out.println("| " +

@@ -10,15 +10,12 @@ public class Test {
         separate(); //------
 
         try {
-            // create Samsung (Galaxy A51)
-            GalaxyA51 galaxyA51 = (GalaxyA51) store.printProperties(PhoneModel.GALAXY_A51);
+            GalaxyA51 galaxyA51 = (GalaxyA51) store.printProperties(PhoneModel.GALAXY_A51); // create phone
             separate(); //------
 
-            // create Samsung (Galaxy S10)
             GalaxyS10 galaxyS10 = (GalaxyS10) store.printProperties(PhoneModel.GALAXY_S10);
             separate(); //------
 
-            // create Other phone (IPhone 11)
             Object otherModel = store.printProperties(PhoneModel.IPHONE_11);
             // throw IllegalArgumentException (IPhone11 is not Samsung)
 
