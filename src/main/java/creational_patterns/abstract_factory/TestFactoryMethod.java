@@ -26,7 +26,7 @@ public class TestFactoryMethod {
         } catch (IllegalArgumentException ex) {
             System.out.println("| " +
                     ex.fillInStackTrace() + " | " +                       // stack trace of exception
-                    store.getPhoneModel().getModelName() + " modeli, " +  // name of phone model
+                    "Bu model, " +
                     store.getStoreName() + "'da movcud deyil");           // name of store name
 
             separate(); //------

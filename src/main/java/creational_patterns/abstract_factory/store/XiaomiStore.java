@@ -6,12 +6,10 @@ import creational_patterns.abstract_factory.phone.PhoneModel;
 
 public class XiaomiStore extends AbstractPhoneStore {
 
-    private PhoneModel phoneModel;
     public static final String storeName = "Xiaomi Store";
 
     @Override
     public Xiaomi createPhone(PhoneModel phoneModel) throws IllegalAccessException, InstantiationException {
-        this.phoneModel = phoneModel;
 
         Xiaomi phone;
 
@@ -29,10 +27,5 @@ public class XiaomiStore extends AbstractPhoneStore {
     @Override
     public String getStoreName() {
         return storeName;
-    }
-
-    @Override
-    public PhoneModel getPhoneModel() {
-        return phoneModel;
     }
 }

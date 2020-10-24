@@ -7,7 +7,6 @@ import creational_patterns.factory_method.phone.PhoneModel;
 
 public class SamsungStore {
 
-    private PhoneModel phoneModel;
     private static final String storeName = "Samsung Store";
 
     public final Phone printProperties(PhoneModel model) throws InstantiationException, IllegalAccessException {
@@ -27,7 +26,6 @@ public class SamsungStore {
     }
 
     public Phone createPhone(PhoneModel phoneModel) throws IllegalAccessException, InstantiationException {
-        this.phoneModel = phoneModel;
 
         Phone phone;
 
@@ -45,9 +43,5 @@ public class SamsungStore {
     // store_name'i obyetkden de chagira bilmek uchun
     public String getStoreName() {
         return storeName;
-    }
-
-    public PhoneModel getPhoneModel() {
-        return phoneModel;
     }
 }

@@ -3,7 +3,7 @@ package creational_patterns.factory_method;
 import creational_patterns.factory_method.phone.*;
 import creational_patterns.factory_method.store.SamsungStore;
 
-public class Test {
+public class TestFactoryMethod {
     public static void main(String[] args) throws IllegalAccessException, InstantiationException {
 
         SamsungStore store = new SamsungStore(); // create store
@@ -22,7 +22,7 @@ public class Test {
         } catch (IllegalArgumentException ex) {
             System.out.println("| " +
                     ex.fillInStackTrace() + " | " +                        // stack trace of exception
-                    store.getPhoneModel().getModelName() + " modeli, " +   // name of phone model
+                    "Bu modeli, " +
                     store.getStoreName() + "'da movcud deyil");            // name of store
 
             separate(); //------

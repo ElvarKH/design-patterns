@@ -27,7 +27,7 @@ public class TestAbstractFactory {
             System.out.println("| " +
                     ex.fillInStackTrace() + " | " +         // stack trace of exception
                     store.getStoreName() + " store'u, " +   // name of factory
-                    store.name + "'da movcud deyil");       // name of factory of factories
+                    store.nameOfStoreOfPhoneStores + "'da movcud deyil");       // name of factory of factories
 
             separate(); //------
         }
