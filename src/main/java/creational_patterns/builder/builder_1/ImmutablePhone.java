@@ -1,4 +1,4 @@
-package creational_patterns.builder_1;
+package creational_patterns.builder.builder_1;
 
 public class ImmutablePhone {
     private final String brand;
@@ -13,7 +13,7 @@ public class ImmutablePhone {
 
     @Override
     public String toString() {
-        return "Phone{" +
+        return "Shop{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", price=" + price +

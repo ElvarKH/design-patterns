@@ -5,7 +5,7 @@ import creational_patterns.abstract_factory.phone.PhoneModel;
 
 public abstract class AbstractPhoneStore {
 
-    public static final String nameOfStoreOfPhoneStores = "Phone Store Factory";
+    public static final String nameOfStoreOfPhoneStores = "Shop Store Factory";
 
     public final Phone printProperties(PhoneModel model) throws InstantiationException, IllegalAccessException {
         System.out.println("| request: " + model); // print model

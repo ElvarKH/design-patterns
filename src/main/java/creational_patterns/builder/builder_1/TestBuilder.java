@@ -1,4 +1,4 @@
-package creational_patterns.builder_1;
+package creational_patterns.builder.builder_1;
 
 public class TestBuilder {
     public static void main(String[] args) {
