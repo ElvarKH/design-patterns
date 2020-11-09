@@ -4,6 +4,7 @@ public class Phone {
     public String brand;
     public String model;
     public Integer price;
+    public String storeName;
 
     public Phone() {
     }
@@ -12,6 +13,7 @@ public class Phone {
         this.brand = builder.brand;
         this.model = builder.model;
         this.price = builder.price;
+        this.storeName = builder.storeName;
     }
 
     public String getBrand() {
@@ -38,12 +40,21 @@ public class Phone {
         this.price = price;
     }
 
+    public String getStoreName() {
+        return storeName;
+    }
+
+    public void setStoreName(String storeName) {
+        this.storeName = storeName;
+    }
+
     @Override
     public String toString() {
-        return "Shop{" +
+        return "Phone{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", price=" + price +
+                ", storeName='" + storeName + '\'' +
                 '}';
     }
 
@@ -51,6 +62,7 @@ public class Phone {
         private String brand;
         private String model;
         private Integer price;
+        private String storeName;
 
         public Builder brand(String brand) {
             this.brand = brand;
@@ -64,6 +76,11 @@ public class Phone {
 
         public Builder price(Integer price) {
             this.price = price;
+            return this;
+        }
+
+        public Builder storeName(String storeName) {
+            this.storeName = storeName;
             return this;
         }
 

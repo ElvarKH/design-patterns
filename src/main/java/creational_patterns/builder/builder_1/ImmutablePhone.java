@@ -4,19 +4,22 @@ public class ImmutablePhone {
     private final String brand;
     private final String model;
     private Integer price;
+    private String storeName;
 
     private ImmutablePhone(ImmutablePhone.Builder builder) {
         this.brand = builder.brand;
         this.model = builder.model;
         this.price = builder.price;
+        this.storeName = builder.storeName;
     }
 
     @Override
     public String toString() {
-        return "Shop{" +
+        return "ImmutablePhone{" +
                 "brand='" + brand + '\'' +
                 ", model='" + model + '\'' +
                 ", price=" + price +
+                ", storeName='" + storeName + '\'' +
                 '}';
     }
 
@@ -24,6 +27,7 @@ public class ImmutablePhone {
         private String brand;
         private String model;
         private Integer price;
+        private String storeName;
 
         public ImmutablePhone.Builder brand(String brand) {
             this.brand = brand;
@@ -37,6 +41,11 @@ public class ImmutablePhone {
 
         public ImmutablePhone.Builder price(Integer price) {
             this.price = price;
+            return this;
+        }
+
+        public ImmutablePhone.Builder storeName(String storeName) {
+            this.storeName = storeName;
             return this;
         }
 
